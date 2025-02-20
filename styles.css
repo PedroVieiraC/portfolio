@@ -8,9 +8,14 @@
   border: none;
 }
 
+body{
+  background-color: #455561;
+  color: white;
+}
+
 .navbar {
   background-color: #011638;
-  border: 2px solid black;
+  border: 2px solid white;
   font-size: 20px;
   color: #a06205 !important;
 }
@@ -72,8 +77,9 @@
   min-height: 85vh;
   width: 90%;
   border-radius: 4rem;
-  border: 0.2rem solid black;
+  border: 0.2rem solid #a06205;
   overflow: hidden;
+  background-color: #FFF;
 }
 
 .inicioesquerda{
@@ -142,11 +148,24 @@ img {
   display: block; /* Remove espaços extras ao redor da imagem */
 }
 
+.sobremimdiv{
+  height: 80px;
+  border: 1px solid white;
+}
+
 .sobremim{
-  margin-top: 80px;
   min-height: 85vh;
   width: 90%;
   border-radius: 4rem;
-  border: 0.2rem solid black;
+  border: 0.2rem solid #a06205;
   overflow: hidden;
+  background-color: #FFF;
 }
+
+.sobrecard{
+  border: 1px solid black;
+  height: 80vh;
+  width: 30%;
+  color: #000;
+}
+
