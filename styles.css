@@ -1,3 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  color: inherit;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+}
+
 .navbar {
   background-color: #011638;
   border: 2px solid black;
@@ -11,6 +21,10 @@
 
 .navbar a:hover {
   color: #ff9800 !important; /* Tom um pouco mais claro no hover */
+  
+  transform: scale(1.2);
+  transition: all 0.4s;
+
 }
 
 .navbar-toggler-icon {
@@ -38,18 +52,19 @@
 .svgNavbar:hover {
   opacity: 1;
   transform: translateY(-0.5rem);
+  transform: scale(1.2);
   cursor: pointer;
   outline: none;
   /* Garantir que o outline não apareça no hover */
 }
 
 .svgNavbar svg path {
-  fill: #a06205 !important;
+  fill: #FFFFFF !important;
   transition: fill 0.3s ease;
-
+  
 }
 .svgNavbar:hover svg path {
-  fill: #FFFFFF !important;
+  fill: #a06205 !important;
 }
 
 .inicio {
@@ -63,20 +78,53 @@
 .inicioesquerda>h1 {
   box-sizing: border-box;
   font-size: 70px;
+  color: #a06205;
+
 }
 
 .inicioesquerda>h1:hover {
-  color: #a06205;
   opacity: 1;
-  transform: translateY(-0.5rem);
+  transform: scale(1.1);
   transition: all 0.8s;
   cursor: pointer;
 }
 
 .inicioesquerda>h2 {
-  color: #a06205;
+  color: #000;
   box-sizing: border-box;
   font-size: 3.2rem;
   text-align: center;
   align-items: center;
+}
+
+.inicioesquerda>button {
+  background: none;
+  box-sizing: border-box;
+  border-radius: 2rem;
+  border: 0.2rem solid black;
+  background-color:#455561;
+  color: #FFF;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.inicioesquerda>button>a {
+  padding: 20px;
+  /* Ajuste esses valores conforme necessário */
+  font-size: 2rem;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.inicioesquerda>button:hover {
+  color: #FFF;
+  opacity: 1;
+  transform: scale(1.05);
+  transition: all 0.8s;
+  cursor: pointer;
+}
+
+.inicio>aside>img {
+  height: 30rem;
+  width: auto;
 }
