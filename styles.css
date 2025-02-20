@@ -1,51 +1,70 @@
 .navbar {
-  background-color: #455561;
+  background-color: #011638;
   border: 2px solid black;
+  font-size: 20px;
 }
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 
+.navbarSvgs {
+  margin: 0;
+  padding: 0;
+}
+
 .svgNavbar {
   font-size: 2rem;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   display: inline-block;
   vertical-align: middle;
   transition: all 0.4s;
   outline: none; /* Adicionado para garantir que o outline não apareça */
 }
 
-/* Remove o outline do SVG (caso ele seja focável) */
-.svgNavbar:focus {
-  outline: none;
-  box-shadow: none;
-}
 
 /* Estilo de hover para o SVG */
 .svgNavbar:hover {
-  color: #7b0925;
   border: 2px solid #7b0925;
   opacity: 1;
   transform: translateY(-0.5rem);
+  
   cursor: pointer;
   outline: none; /* Garantir que o outline não apareça no hover */
 }
 
-/* Remove o outline do link que envolve o SVG */
-.navbarSvgs a {
-  outline: none;
+.svgNavbar svg path {
+  fill: white !important;
+
 }
 
-.navbarSvgs a:hover {
-  outline: none;
+
+.inicio{
+  margin-top: 90px;
+  width: 90%;
+  border-radius: 4rem;
+  border: 0.2rem solid black;
+  overflow: hidden;
 }
 
-.navbarSvgs {
-  margin: 0;
-  padding: 0;
+.inicioesquerda>h1{
+  box-sizing: border-box;
+  font-size: 70px;
 }
-a{
-  text-decoration: none;
+
+.inicioesquerda>h1:hover{
+  color: #7b0925;
+  opacity: 1;
+  transform: translateY(-0.5rem);
+  transition: all 0.8s;
+  cursor: pointer;
+}
+
+.inicioesquerda>h2 {
+  color: #a06205;
+  box-sizing: border-box;
+  font-size: 3.2rem;
+  text-align: center;
+  align-items: center;
 }
