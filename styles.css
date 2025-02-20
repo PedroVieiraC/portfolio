@@ -75,11 +75,17 @@
   overflow: hidden;
 }
 
+.inicioesquerda{
+  padding: 10px;
+}
+
+
 .inicioesquerda>h1 {
   box-sizing: border-box;
-  font-size: 70px;
   color: #a06205;
-
+  font-size: clamp(70px, 5vw, 70px);
+  text-align: center; 
+  word-wrap: break-word;
 }
 
 .inicioesquerda>h1:hover {
@@ -92,7 +98,7 @@
 .inicioesquerda>h2 {
   color: #000;
   box-sizing: border-box;
-  font-size: 3.2rem;
+  font-size: clamp(50px, 5vw, 50px);
   text-align: center;
   align-items: center;
 }
@@ -127,4 +133,10 @@
 .inicio>aside>img {
   height: 30rem;
   width: auto;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+  display: block; /* Remove espaços extras ao redor da imagem */
 }
