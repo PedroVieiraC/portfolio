@@ -69,6 +69,7 @@
 
 .inicio {
   margin-top: 90px;
+  min-height: 85vh;
   width: 90%;
   border-radius: 4rem;
   border: 0.2rem solid black;
@@ -139,4 +140,13 @@ img {
   max-width: 50%;
   height: auto;
   display: block; /* Remove espaços extras ao redor da imagem */
+}
+
+.sobremim{
+  margin-top: 80px;
+  min-height: 85vh;
+  width: 90%;
+  border-radius: 4rem;
+  border: 0.2rem solid black;
+  overflow: hidden;
 }
