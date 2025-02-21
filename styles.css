@@ -8,7 +8,7 @@
   border: none;
 }
 
-body{
+body {
   background-color: #455561;
   color: white;
 }
@@ -25,8 +25,9 @@ body{
 }
 
 .navbar a:hover {
-  color: #ff9800 !important; /* Tom um pouco mais claro no hover */
-  
+  color: #ff9800 !important;
+  /* Tom um pouco mais claro no hover */
+
   transform: scale(1.2);
   transition: all 0.4s;
 
@@ -66,8 +67,9 @@ body{
 .svgNavbar svg path {
   fill: #FFFFFF !important;
   transition: fill 0.3s ease;
-  
+
 }
+
 .svgNavbar:hover svg path {
   fill: #a06205 !important;
 }
@@ -82,7 +84,7 @@ body{
   background-color: #FFF;
 }
 
-.inicioesquerda{
+.inicioesquerda {
   padding: 10px;
 }
 
@@ -91,7 +93,7 @@ body{
   box-sizing: border-box;
   color: #a06205;
   font-size: clamp(70px, 5vw, 70px);
-  text-align: center; 
+  text-align: center;
   word-wrap: break-word;
 }
 
@@ -115,7 +117,7 @@ body{
   box-sizing: border-box;
   border-radius: 2rem;
   border: 0.2rem solid black;
-  background-color:#455561;
+  background-color: #455561;
   color: #FFF;
   cursor: pointer;
   margin-top: 1rem;
@@ -145,27 +147,50 @@ body{
 img {
   max-width: 50%;
   height: auto;
-  display: block; /* Remove espaços extras ao redor da imagem */
+  display: block;
+  /* Remove espaços extras ao redor da imagem */
 }
 
-.sobremimdiv{
-  height: 80px;
-  border: 1px solid white;
-}
 
-.sobremim{
-  min-height: 85vh;
-  width: 90%;
-  border-radius: 4rem;
-  border: 0.2rem solid #a06205;
+.sobremim {
+  margin-top: 30px;
+  min-height: 100vh;
+  width: 100vw;
   overflow: hidden;
+  border: px solid black;
   background-color: #FFF;
 }
 
-.sobrecard{
+.sobrecard {
+  background-color: #FFF;
   border: 1px solid black;
-  height: 80vh;
-  width: 30%;
+  height: 65vh;
+  min-width: 30%;
   color: #000;
+  overflow: hidden;
 }
 
+.card-title {
+  background-color: #011638;
+  color: #FFF;
+  margin: 0 !important;
+  padding: 0;
+  height: 50px;
+  font-size: clamp(35px, 5vw, 35px);
+}
+
+.sobrecard>h5 {
+  color: #000;
+  border: 2px solid black;
+
+}
+
+.card-body {
+  padding: 0;
+  margin: 0;
+}
+
+.sobrecard {
+  margin-top: 15px;
+  border: 3px solid black;
+}
