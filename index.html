@@ -99,71 +99,38 @@
         </aside>
     </div>
 
-    <div class="sobremim d-flex justify-content-center align-items-center" id="sobremim">
-        <section class="container mt-5">
-            <div class="row">
-                <!-- Informações Pessoais -->
-                <div class="col-md-4">
-                    <div class="sobrecard card text-center flex-grow-1">
-                        <div class="card-body">
-                            <div class="innerCard d-flex flex-column h-100">
-                                <!-- Informações Pessoais -->
-                                <div class="flex-fill d-flex flex-column justify-content-start">
-                                    <h5 class="card-title d-flex justify-content-center">Informações Pessoais</h5>
-                                    <p class="card-text "> Meu nome é <strong>Pedro Vieira</strong>, tenho 21 anos. Apreciador da tecnologia e do desenvolvimento de software, busco constantemente aprimorar minhas habilidades e expandir meus conhecimentos.
-                                    </p>
-                                </div>
-                                <!-- Soft Skills -->
-                                <div class="flex-fill d-flex flex-column justify-content-start">
-                                    <h5 class="card-title">Soft Skills</h5>
-                                    <p class="card-texts">Considero que tenho como <strong>Soft Skills</strong>, a facilidade com a comunicação e a facilidade em ensinar, me tornando assim um profissional capaz de transmitir e receber conhecimento de forma clara e eficaz.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Informação Acadêmica -->
-                <div class="col-md-4">
-                    <div class="sobrecard card text-center shadow">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Formação Acadêmica</h5>
-                            <div class="d-flex justify-content-center w-100">
-                                <img class="lcefet img-fluid" src="./compounds/images/lcef.png"
-                                    alt="Logo do CEFET-MG" />
-                            </div>
-                            <p class="card-text">
-                                Atualmente, sou estudante de <strong>Engenharia de Computação</strong> no
-                                <strong>CEFET-MG</strong>.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Informação Profissional -->
-                <div class="col-md-4">
-                    <div class="sobrecard card text-center shadow">
-                        <div class="card-body">
-                            <h5 class="card-title d-flex justify-content-center align-items-center flex-wrap">
-                                Experiência e Habilidades</h5>
-                            <p class="card-text">Apesar de ainda não possuir experiência profissional formal,
-                                desenvolvo
-                                projetos pessoais e acadêmicos. Me interesso principalmente por desenvolvimento
-                                back-end, bancos de dados
-                                e tecnologias inovadoras. Ainda sim, sei operar o front-end suficientemente para
-                                criar
-                                aplicações web.</p>
-                        </div>
-                    </div>
-                </div>
+    <div class="sobremim container-fluid mt-5 d-flex justify-content-center align-items-center" id="sobremim">
+        <div class="row d-flex align-items-center">
+          <!-- Card menor à esquerda com botões e imagem -->
+          <div class="col-md-3 d-flex flex-column align-items-center">
+            <div class="card">
+              <div class="card-body">
+                <button id="btnPersonal" class="btn btn-primary btn-block mb-2">Informações pessoais</button>
+                <button id="btnAcademic" class="btn btn-primary btn-block mb-2">Informações acadêmicas</button>
+                <button id="btnProfessional" class="btn btn-primary btn-block">Informações profissionais</button>
+              </div>
             </div>
-        </section>
-    </div>
+          </div>
+          <!-- Card maior à direita com conteúdo -->
+          <div class="col-md-9 d-flex justify-content-center">
+            <div class="card w-100">
+              <div class="card-header">
+                <h5 id="card-title">Informações pessoais</h5>
+              </div>
+              <div class="card-body" id="card-content">
+                <p>Meu nome é <strong>Pedro Vieira</strong>, tenho 21 anos. Apreciador da tecnologia e do desenvolvimento de software, busco constantemente aprimorar minhas habilidades e expandir meus conhecimentos.</p>
+                <p><strong>Soft Skills:</strong> Tenho facilidade com a comunicação e em ensinar, permitindo transmitir e receber conhecimento de forma clara e eficaz.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 

@@ -8,8 +8,9 @@
   border: none;
 }
 
-body {
-  background-color: #5c6d70;
+html, body {
+  overflow-x: hidden;
+  width: 100%;
   color: white;
 }
 
@@ -79,7 +80,6 @@ body {
   min-height: 85vh;
   width: 90%;
   border-radius: 4rem;
-  border: 0.2rem solid #a06205;
   overflow: hidden;
   background-color: #FFF;
 }
@@ -140,7 +140,7 @@ body {
 }
 
 .inicio>aside>img {
-  height: 30rem;
+  height: 20rem;
   width: auto;
 }
 
@@ -148,76 +148,62 @@ img {
   max-width: 50%;
   height: auto;
   display: block;
-  /* Remove espaços extras ao redor da imagem */
 }
 
-.lcefet{
+.imgsobre{
   max-width: 50%;
   height: auto;
   display: block;
+  height: 20rem;
+  width: auto;
 
 }
 
 .sobremim {
   margin-top: 30px;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
-  border: px solid black;
-  background-color: #FFF;
+  border: 1px solid black;
 }
 
-.sobrecard {
-  background-color: #FFF;
-  border: 1px solid black;
-  height: 65vh;
-  min-width: 30%;
-  color: #000;
-  overflow: hidden;
+.card-header {
+  background-color: #011638; /* Fundo do cabeçalho */
+  text-align: center;        /* Centraliza o título */
 }
 
 .card-title {
-  background-color: #011638;
   color: #FFF;
   margin: 0 !important;
-  padding: 0;
-  height: 50px;
-  font-size: clamp(35px, 5vw, 35px);
+  padding: 10px;
+  font-size: clamp(20px, 5vw, 35px);
 }
 
-.sobrecard>h5 {
-  color: #000;
-  border: 2px solid black;
-
+/* Caso queira centralizar o conteúdo interno do card */
+#card-content {
+  text-align: center;
 }
 
-.card-body {
-  padding: 0;
-  margin: 0;
-}
-
-.sobrecard {
-  background-color: #FFF;
-  border: 3px solid black;
-  min-height: 65vh; 
-  height: auto;     
-  min-width: 30%;
-  color: #000;
-  overflow: visible;
-  margin-top: 15px;
-}
-
-.innerCard {
- height: 100%;
-}
-
-.card-text{
-  font-size: 25px;
-}
-
-.card-texts{
-  font-size: 23px;
+#card-title {
+  color: #FFF;
 }
 
 
+/* Estilização dos botões */
+.btn-block {
+  text-align: left;
+}
 
+.btn {
+  width: 100%;
+  background-color: #011638;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #012a5a;
+  transform: scale(1.05);
+}
