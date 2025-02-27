@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
         personal: {
             title: 'Informações pessoais',
             content: `
-            <div class="container d-flex flex-row align-items-center justify-content-center">
+            <div class="container info-wrapper d-flex flex-row align-items-center justify-content-center">
               <p class="me-3">
                 Meu nome é <strong>Pedro Vieira</strong>, tenho 21 anos. Apreciador da tecnologia e do desenvolvimento de software, busco constantemente aprimorar minhas habilidades e expandir meus conhecimentos.
               </p>
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         academic: {
             title: 'Informações acadêmicas',
             content: `
-            <div class="container d-flex flex-row align-items-center justify-content-center">
+            <div class="container info-wrapper d-flex flex-row align-items-center justify-content-center">
               <p class="me-3">
                 Atualmente, sou estudante de <strong>Engenharia de Computação</strong> no <strong>CEFET-MG</strong>.
               </p>
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         professional: {
             title: 'Informações profissionais',
             content: `
-            <div class="container d-flex flex-row align-items-center justify-content-center">
+            <div class="container info-wrapper d-flex flex-row align-items-center justify-content-center">
               <p class="me-3">
                 Apesar de ainda não possuir experiência profissional formal, desenvolvo projetos pessoais e acadêmicos. Me interesso principalmente por desenvolvimento back-end, bancos de dados e tecnologias inovadoras. Também possuo conhecimentos em front-end para criação de aplicações web.
               </p>

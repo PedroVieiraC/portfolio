@@ -139,14 +139,6 @@ html, body {
   cursor: pointer;
 }
 
-
-
-img {
-  max-width: 50%;
-  height: auto;
-  display: block;
-}
-
 .imgsobre{
   max-width: 30%;
   height: auto;
@@ -211,4 +203,17 @@ img {
 .btn:hover {
   background-color: #012a5a;
   transform: scale(1.05);
+}
+
+/* Responsividade: reduz as dimensões em telas pequenas */
+@media (max-width: 768px) {
+  .imgsobrefoto,
+  .imgsobre {
+    width: 10rem;
+    height: 10rem;
+  }
+  .info-wrapper {
+    flex-direction: column !important;
+    text-align: center; /* Opcional: centraliza o texto */
+  }
 }
