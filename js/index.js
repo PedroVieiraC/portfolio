@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <p class="me-3">
                 Meu nome é <strong>Pedro Vieira</strong>, tenho 21 anos. Apreciador da tecnologia e do desenvolvimento de software, busco constantemente aprimorar minhas habilidades e expandir meus conhecimentos.
               </p>
-              <img class="imgsobre img-fluid" src="./compounds/images/eu.png" alt="Foto de perfil"/>
+              <img class="imgsobrefoto" src="./compounds/images/eufotor.png" alt="Foto de perfil"/>
             </div>
             `
         },
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <p class="me-3">
                 Apesar de ainda não possuir experiência profissional formal, desenvolvo projetos pessoais e acadêmicos. Me interesso principalmente por desenvolvimento back-end, bancos de dados e tecnologias inovadoras. Também possuo conhecimentos em front-end para criação de aplicações web.
               </p>
-              <img class="imgsobre img-fluid" src="https://via.placeholder.com/150?text=Liderart" alt="Logo Liderart" style="max-width: 150px; height: auto;"/>
+              <img class="imgsobre img-fluid" src="https://img.freepik.com/vetores-gratis/entrar-manutencao-de-estradas_1063-51.jpg?uid=R56932080&ga=GA1.1.1633943016.1737936399&semt=ais_hybrid" alt="em obras Designed by Ikaika / Freepik"/>
             </div>
             `
         }

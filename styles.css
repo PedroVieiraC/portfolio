@@ -79,9 +79,9 @@ html, body {
   margin-top: 90px;
   min-height: 85vh;
   width: 90%;
-  border-radius: 4rem;
   overflow: hidden;
   background-color: #FFF;
+  border-bottom: 5px solid black;
 }
 
 .inicioesquerda {
@@ -139,10 +139,7 @@ html, body {
   cursor: pointer;
 }
 
-.inicio>aside>img {
-  height: 20rem;
-  width: auto;
-}
+
 
 img {
   max-width: 50%;
@@ -151,20 +148,28 @@ img {
 }
 
 .imgsobre{
-  max-width: 50%;
+  max-width: 30%;
   height: auto;
   display: block;
-  height: 20rem;
+  height: 20rem; 
+  width: 20rem;
   width: auto;
+}
 
+.imgsobrefoto{
+  height: 20rem; 
+  width: 20rem;
+  border-radius: 50%;
+  border: 3px solid black;
+  object-fit: cover;
 }
 
 .sobremim {
   margin-top: 30px;
   min-height: 100vh;
-  width: 100%;
+  width: 90%;
   overflow: hidden;
-  border: 1px solid black;
+  border-bottom: 5px solid black;
 }
 
 .card-header {
