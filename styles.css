@@ -28,14 +28,13 @@ html, body {
 .navbar a:hover {
   color: #ff9800 !important;
   /* Tom um pouco mais claro no hover */
-
   transform: scale(1.2);
   transition: all 0.4s;
 
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 
 .navbarSvgs {
@@ -51,23 +50,20 @@ html, body {
   vertical-align: middle;
   transition: all 0.4s;
   outline: none;
-  /* Adicionado para garantir que o outline não apareça */
 }
 
 
 /* Estilo de hover para o SVG */
 .svgNavbar:hover {
   opacity: 1;
-  transform: translateY(-0.5rem);
-  transform: scale(1.2);
+  transform: translateY(-0.5rem) scale(1.2);
   cursor: pointer;
   outline: none;
-  /* Garantir que o outline não apareça no hover */
 }
 
 .svgNavbar svg path {
   fill: #FFFFFF !important;
-  transition: fill 0.3s ease;
+  transition: fill 1s ease;
 
 }
 
@@ -76,13 +72,17 @@ html, body {
 }
 
 .inicio {
+  position: relative;
   margin-top: 90px;
-  min-height: 85vh;
-  width: 90%;
+  height: 88vh;
+  width: 100vw;
   overflow: hidden;
-  background-color: #FFF;
-  border-bottom: 5px solid black;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('images/setup.png') no-repeat center center;
+  background-size: cover;
+  
 }
+
 
 .inicioesquerda {
   padding: 10px;
@@ -112,58 +112,6 @@ html, body {
   align-items: center;
 }
 
-.inicioesquerda>button {
-  background: none;
-  box-sizing: border-box;
-  border-radius: 2rem;
-  border: 0.2rem solid black;
-  background-color: #455561;
-  color: #FFF;
-  cursor: pointer;
-  margin-top: 1rem;
-}
-
-.inicioesquerda>button>a {
-  padding: 20px;
-  /* Ajuste esses valores conforme necessário */
-  font-size: 2rem;
-  color: #FFF;
-  text-decoration: none;
-}
-
-.inicioesquerda>button:hover {
-  color: #FFF;
-  opacity: 1;
-  transform: scale(1.05);
-  transition: all 0.8s;
-  cursor: pointer;
-}
-
-.imgsobre{
-  max-width: 30%;
-  height: auto;
-  display: block;
-  height: 20rem; 
-  width: 20rem;
-  width: auto;
-}
-
-.imgsobrefoto{
-  height: 20rem; 
-  width: 20rem;
-  border-radius: 50%;
-  border: 3px solid black;
-  object-fit: cover;
-}
-
-.sobremim {
-  margin-top: 30px;
-  min-height: 100vh;
-  width: 90%;
-  overflow: hidden;
-  border-bottom: 5px solid black;
-}
-
 .card-header {
   background-color: #011638; /* Fundo do cabeçalho */
   text-align: center;        /* Centraliza o título */
@@ -185,35 +133,8 @@ html, body {
   color: #FFF;
 }
 
-
-/* Estilização dos botões */
-.btn-block {
-  text-align: left;
-}
-
-.btn {
-  width: 100%;
+.sobremim{
   background-color: #011638;
-  border: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  font-weight: 500;
-}
-
-.btn:hover {
-  background-color: #012a5a;
-  transform: scale(1.05);
-}
-
-/* Responsividade: reduz as dimensões em telas pequenas */
-@media (max-width: 768px) {
-  .imgsobrefoto,
-  .imgsobre {
-    width: 10rem;
-    height: 10rem;
-  }
-  .info-wrapper {
-    flex-direction: column !important;
-    text-align: center; /* Opcional: centraliza o texto */
-  }
+  height: 100vh;
+  width: 100vw;
 }
