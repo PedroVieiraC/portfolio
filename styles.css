@@ -8,10 +8,15 @@
   border: none;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
   width: 100%;
   color: white;
+}
+
+.body {
+  display: block;
 }
 
 .navbar {
@@ -19,6 +24,7 @@ html, body {
   border: 2px solid white;
   font-size: 20px;
   color: #a06205 !important;
+  border: 5px solid black;
 }
 
 .navbar a {
@@ -27,10 +33,8 @@ html, body {
 
 .navbar a:hover {
   color: #ff9800 !important;
-  /* Tom um pouco mais claro no hover */
   transform: scale(1.2);
   transition: all 0.4s;
-
 }
 
 .navbar-toggler-icon {
@@ -52,8 +56,6 @@ html, body {
   outline: none;
 }
 
-
-/* Estilo de hover para o SVG */
 .svgNavbar:hover {
   opacity: 1;
   transform: translateY(-0.5rem) scale(1.2);
@@ -64,7 +66,6 @@ html, body {
 .svgNavbar svg path {
   fill: #FFFFFF !important;
   transition: fill 1s ease;
-
 }
 
 .svgNavbar:hover svg path {
@@ -73,67 +74,59 @@ html, body {
 
 .inicio {
   position: relative;
-  margin-top: 90px;
-  height: 88vh;
-  width: 100vw;
+  padding-top: 83px;
+  margin: 0;
+  width: 100%;
+  border: 5px solid black;
   overflow: hidden;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-              url('images/setup.png') no-repeat center center;
-  background-size: cover;
-  
+}
+
+.inicio img {
+  width: 100%;
+  height: auto;
 }
 
 
-.inicioesquerda {
-  padding: 10px;
-}
-
-
-.inicioesquerda>h1 {
-  box-sizing: border-box;
-  color: #a06205;
-  font-size: clamp(70px, 5vw, 70px);
+.texto-div {
+  position: absolute;
+  width: 54vw;
+  aspect-ratio: 16 / 9;
+  transform: translate(0%, -33%);
   text-align: center;
-  word-wrap: break-word;
-}
+  color: black;
+  border: 3px solid red;
+  padding: 1rem;
 
-.inicioesquerda>h1:hover {
-  opacity: 1;
-  transform: scale(1.1);
-  transition: all 0.8s;
-  cursor: pointer;
-}
-
-.inicioesquerda>h2 {
-  color: #000;
-  box-sizing: border-box;
-  font-size: clamp(50px, 5vw, 50px);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+
+  overflow: hidden;
 }
 
-.card-header {
-  background-color: #011638; /* Fundo do cabeçalho */
-  text-align: center;        /* Centraliza o título */
+.textointroducao1,
+.textointroducao2,
+.textointroducao3 {
+  font-size: clamp(1.2rem, 4vw, 4.5vh);
+  line-height: 1.2;
+  word-break: break-word;
+  color: yellow;
 }
 
-.card-title {
-  color: #FFF;
-  margin: 0 !important;
-  padding: 10px;
-  font-size: clamp(20px, 5vw, 35px);
+.textointroducao1 {
+  border: 3px solid red;
 }
 
-/* Caso queira centralizar o conteúdo interno do card */
-#card-content {
-  text-align: center;
+.textointroducao2 {
+  border: 3px solid red;
 }
 
-#card-title {
-  color: #FFF;
+.textointroducao3 {
+  border: 3px solid red;
 }
 
-.sobremim{
+.sobremim {
   background-color: #011638;
   height: 100vh;
   width: 100vw;
