@@ -97,12 +97,8 @@ body {
 
   padding: 1rem;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
   overflow: hidden;
+  border: 3px solid red;
 }
 
 .textointroducao1,
@@ -111,7 +107,9 @@ body {
   font-size: clamp(1.2rem, 4vw, 4.5vh);
   line-height: 1.2;
   word-break: break-word;
-  color: yellow;
+  color: white;
+  transform: translate(8%, 0%);
+  width: 90%;
 }
 
 .textointroducao1 {
@@ -130,4 +128,45 @@ body {
   background-color: #011638;
   height: 100vh;
   width: 100vw;
+}
+
+.skills {
+  background-color: #FFEEDD;
+  height: 100vh;
+  width: 100vw;
+}
+
+.portfolio {
+  background-color: #011638;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media (max-width: 900px) {
+  .inicio {
+    padding-top: 0;
+  }
+
+  .inicio img {
+    display: none;
+  }
+
+  .texto-div {
+    width: 100%;
+    height: 100%;
+    transform: translate(0%, -50%);
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .textointroducao1,
+  .textointroducao2,
+  .textointroducao3 {
+    font-size: clamp(1.2rem, 4vw, 4.5vh);
+    line-height: 1.2;
+    word-break: break-word;
+    color: white;
+    transform: translate(0%, 0%);
+    width: 100%;
+  }
 }
