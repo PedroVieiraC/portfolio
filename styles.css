@@ -13,6 +13,7 @@ body {
   overflow-x: hidden;
   width: 100%;
   color: white;
+  background-color: #011638;
 }
 
 .body {
@@ -126,8 +127,13 @@ body {
 
 .sobremim {
   background-color: #011638;
-  height: 100vh;
   width: 100vw;
+  padding: 4rem;
+}
+
+.texto-sobre > h1,h2,p{  
+  margin: 0px;
+  padding: 0px;
 }
 
 .skills {
