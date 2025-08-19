@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
             if (window.pageYOffset >= sectionTop - 200) {
                 current = section.getAttribute('id');
             }
@@ -60,16 +59,4 @@ document.addEventListener("DOMContentLoaded", function () {
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(section);
     });
-
-    // Navbar transparente/opaca baseada no scroll
-    const navbar = document.querySelector('.navbar');
-    function handleNavbarScroll() {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    }
-
-    window.addEventListener('scroll', handleNavbarScroll);
 });

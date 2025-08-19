@@ -14,7 +14,9 @@ import { Analytics } from "@vercel/analytics/next"
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
+    
+    <!-- Vercel Analytics -->
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 
 <body>
@@ -40,7 +42,7 @@ import { Analytics } from "@vercel/analytics/next"
                     <a class="nav-link" href="#skills">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Portfolio">Portfólio</a>
+                    <a class="nav-link" href="#portfolio">Portfólio</a>
                 </li>
             </ul>
             <!-- Botões no Canto Direito -->
@@ -92,44 +94,137 @@ import { Analytics } from "@vercel/analytics/next"
 
 
     <section class="inicio container-fluid d-flex justify-content-evenly align-items-center" id="inicio">
-
         <img class="img-fluid" src="./images/setup3.png" alt="setup" />
         <div class="laptop-div d-flex justify-content-evenly align-items-center flex-column">
             <h1 class="laptopintroducao1">Eu sou<br></h1>
             <h1 class="laptopintroducao2">Pedro Vieira</h1>
-            <h2 class="laptopintroducao3">Desenvolvedor Back-End</h2>
+            <h2 class="laptopintroducao3">Desenvolvedor <span class="back-end">Back-End</span></h2>
         </div>
-        <div class="cellphone-div d-flex justify-content-evenly align-items-center flex-column">
-            <h1 class="textointroducao1">Eu sou<br></h1>
-            <h1 class="textointroducao2">Pedro Vieira</h1>
-            <h2 class="textointroducao3">Desenvolvedor Back-End</h2>
-        </div>
+        <div class="cellphone-div">
+            <div class="intro-content">
+                <img class="intro-image" src="./images/minha-foto.jpg" alt="Pedro Vieira" />
+                <div class="intro-text">
+                    <h1 class="textointroducao1">Eu sou</h1>
+                    <h1 class="textointroducao2">Pedro Vieira</h1>
+                    <h2 class="textointroducao3">Desenvolvedor <span class="back-end">Back-End</span></h2>
+                </div>
+            </div>
         </div>
     </section>
 
 
-    <section class="sobremim container-fluid d-flex align-items-center flex-column" id="sobremim">
-        <div class="texto-sobre d-flex justify-content-evenly align-items-center flex-column">
+    <section class="sobremim container-fluid" id="sobremim">
+        <div class="texto-sobre">
             <h1>Sobre mim</h1>
-            <p>Desenvolvedor Back-end especializado em solucionar problemas de qualquer espécie. Curso
-                engenharia de computação no CEFET-MG e atualmente estou no sétimo período. Busco
-                oportunidades para aplicar meus conhecimentos e aprender mais sobre desenvolvimento de software.
-                Minhas áreas de interesse incluem desenvolvimento de software e internet das coisas (IoT). Meus projetos
-                se
-                especializam, principalmente, em Java, Java Script, HTML, CSS e SQL.
-            </p>
+            <p>Desenvolvedor Back-end especializado em solucionar problemas de qualquer espécie. Curso engenharia de computação no CEFET-MG e atualmente estou no sétimo período. Busco oportunidades para aplicar meus conhecimentos e aprender mais sobre desenvolvimento de software. Minhas áreas de interesse incluem desenvolvimento de software e internet das coisas (IoT). Meus projetos se especializam, principalmente, em Java, JavaScript, HTML, CSS e SQL.</p>
         </div>
     </section>
 
-    <section class="skills container-fluid d-flex align-items-center" id="skills">
-        <h1>Habilidades</h1>
+    <section class="skills container-fluid" id="skills">
+        <div class="skills-content">
+            <h1>Habilidades</h1>
+            
+            <div class="skills-section">
+                <h2>Linguagens de Programação</h2>
+                <div class="skills-grid">
+                    <!-- C -->
+                    <div class="skill-card">
+                        <div class="skill-front">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+                            <h3>C</h3>
+                        </div>
+                        <div class="skill-back">
+                            <h4>Linguagem C</h4>
+                            <p>Linguagem de programação de baixo nível, ideal para programação de sistemas e embedded.</p>
+                        </div>
+                    </div>
+
+                    <!-- Java -->
+                    <div class="skill-card">
+                        <div class="skill-front">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                            <h3>Java</h3>
+                        </div>
+                        <div class="skill-back">
+                            <h4>Java</h4>
+                            <p>Linguagem robusta e orientada a objetos, amplamente usada em desenvolvimento enterprise.</p>
+                        </div>
+                    </div>
+
+                    <!-- Python -->
+                    <div class="skill-card">
+                        <div class="skill-front">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                            <h3>Python</h3>
+                        </div>
+                        <div class="skill-back">
+                            <h4>Python</h4>
+                            <p>Linguagem versátil e poderosa, ideal para automação, análise de dados e desenvolvimento web.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <h2>Tecnologias Web</h2>
+                <div class="skills-grid">
+                    <!-- HTML -->
+                    <div class="skill-card">
+                        <div class="skill-front">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                            <h3>HTML</h3>
+                        </div>
+                        <div class="skill-back">
+                            <h4>HTML5</h4>
+                            <p>Linguagem de marcação para estruturação de páginas web modernas e semânticas.</p>
+                        </div>
+                    </div>
+
+                    <!-- CSS -->
+                    <div class="skill-card">
+                        <div class="skill-front">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                            <h3>CSS</h3>
+                        </div>
+                        <div class="skill-back">
+                            <h4>CSS3</h4>
+                            <p>Linguagem de estilização para criar interfaces bonitas e responsivas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <h2>Frameworks</h2>
+                <div class="skills-grid">
+                    <!-- Spring Boot -->
+                    <div class="skill-card">
+                        <div class="skill-front">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot">
+                            <h3>Spring Boot</h3>
+                        </div>
+                        <div class="skill-back">
+                            <h4>Spring Boot</h4>
+                            <p>Framework Java para desenvolvimento de aplicações enterprise robustas e escaláveis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="other-skills">
+                <h2>Outras Habilidades</h2>
+                <div class="skills-description">
+                    <p>Além das tecnologias principais, possuo experiência em desenvolvimento de projetos IoT (Internet das Coisas), banco de dados SQL, versionamento com Git, metodologias ágeis e resolução de problemas complexos. Sempre em busca de aprender novas tecnologias e aplicar as melhores práticas de desenvolvimento.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="portfolio container-fluid d-flex justify-content-center align-items-center" id="portfolio">
         <h1>Portfolio</h1>
     </section>
 
-    <script type="module" src="./js/index.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
