@@ -1,0 +1,61 @@
+.project-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(45deg, var(--primary-orange), var(--secondary-orange));
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+}
+
+.project-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+  text-decoration: none;
+  color: white;
+}
+
+/* Outros botões podem ser adicionados aqui */
+.btn-primary {
+  background: linear-gradient(45deg, var(--primary-orange), var(--secondary-orange));
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+  background: linear-gradient(45deg, var(--secondary-orange), var(--primary-orange));
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--primary-orange);
+  color: var(--primary-orange);
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--primary-orange);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+}

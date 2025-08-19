@@ -1,0 +1,110 @@
+.contatos {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  position: relative;
+}
+
+.contatos-content {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.contatos h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--primary-orange);
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.contatos h1::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-orange), var(--secondary-orange));
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(255, 152, 0, 0.3);
+}
+
+.contatos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.contato-icon {
+  font-size: 2.2rem;
+  color: var(--primary-orange);
+  margin-bottom: 0.8rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contato-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: var(--primary-orange);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.contato-info {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-white);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.contato-link {
+  color: var(--text-white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contato-link:hover {
+  color: var(--primary-orange);
+  text-decoration: none;
+}
+
+/* Responsividade para Contatos */
+@media (max-width: 768px) {
+  .contatos {
+    padding: 2rem 1rem;
+  }
+  
+  .contatos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .contato-icon {
+    font-size: 1.8rem;
+  }
+  
+  .contato-title {
+    font-size: 0.9rem;
+  }
+  
+  .contato-info {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contatos-grid {
+    grid-template-columns: 1fr;
+  }
+}

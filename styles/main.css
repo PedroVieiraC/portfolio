@@ -1,0 +1,10 @@
+/* Imports de todos os arquivos CSS */
+@import url('./base.css');
+@import url('./components/navbar.css');
+@import url('./components/cards.css');
+@import url('./components/buttons.css');
+@import url('./sections/inicio.css');
+@import url('./sections/sobremim.css');
+@import url('./sections/skills.css');
+@import url('./sections/portfolio.css');
+@import url('./sections/contatos.css');

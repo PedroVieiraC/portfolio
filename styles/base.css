@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Variáveis CSS */
+:root {
+  --primary-orange: #ff9800;
+  --secondary-orange: #f57c00;
+  --dark-blue: #0d0e22;
+  --medium-blue: #0b375b;
+  --gray-start: #515151;
+  --gray-middle: #859490;
+  --text-white: #e8e8e8;
+  --text-light: rgba(255, 255, 255, 0.9);
+}
+
+/* Reset e configurações globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, var(--dark-blue), var(--medium-blue), var(--dark-blue));
+  background-attachment: fixed;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Remover gradientes individuais das seções */
+.inicio, .sobremim, .skills, .portfolio, .contatos {
+  background: none;
+}
+
+/* Tipografia global */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--primary-orange);
+  text-align: center;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
