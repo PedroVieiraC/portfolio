@@ -82,6 +82,17 @@
   letter-spacing: 1px;
 }
 
+/* Quebra de linha responsiva para "Desenvolvedor Back-end" */
+.break-mobile {
+  display: none;
+}
+
+@media (max-width: 1153px) {
+  .break-mobile {
+    display: block;
+  }
+}
+
 /* Estilo específico para "BACK-END" */
 .back-end {
   color: var(--primary-orange);
