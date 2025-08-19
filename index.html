@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next"
+
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -19,7 +21,7 @@
     <nav class="navbar navbar-expand-md fixed-top p-3">
         <!-- Logotipo -->
         <a class="dm navbar-brand d-flex" href="#inicio">Pedro Vieira</a>
-        
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -92,8 +94,13 @@
     <section class="inicio container-fluid d-flex justify-content-evenly align-items-center" id="inicio">
 
         <img class="img-fluid" src="./images/setup3.png" alt="setup" />
-        <div class="texto-div d-flex justify-content-evenly align-items-center flex-column">
-            <h1 class="textointroducao1">Olá, eu sou<br></h1>
+        <div class="laptop-div d-flex justify-content-evenly align-items-center flex-column">
+            <h1 class="laptopintroducao1">Eu sou<br></h1>
+            <h1 class="laptopintroducao2">Pedro Vieira</h1>
+            <h2 class="laptopintroducao3">Desenvolvedor Back-End</h2>
+        </div>
+        <div class="cellphone-div d-flex justify-content-evenly align-items-center flex-column">
+            <h1 class="textointroducao1">Eu sou<br></h1>
             <h1 class="textointroducao2">Pedro Vieira</h1>
             <h2 class="textointroducao3">Desenvolvedor Back-End</h2>
         </div>
@@ -122,7 +129,7 @@
         <h1>Portfolio</h1>
     </section>
 
-
+    <script type="module" src="./js/index.js"></script>
 </body>
 
 </html>

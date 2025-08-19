@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap');
 
 
@@ -91,7 +92,7 @@ h6 {
 }
 
 
-.texto-div {
+.laptop-div {
   position: absolute;
   width: 54vw;
   height: 50vh;
@@ -105,9 +106,14 @@ h6 {
   border: 3px solid red;
 }
 
-.textointroducao1,
-.textointroducao2,
-.textointroducao3 {
+.cellphone-div {
+  display: none !important;
+}
+
+
+.laptopintroducao1,
+.laptopintroducao2,
+.laptopintroducao3 {
   font-size: clamp(1.2rem, 4vw, 4.5vh);
   line-height: 1.2;
   word-break: break-word;
@@ -116,15 +122,15 @@ h6 {
   width: 90%;
 }
 
-.textointroducao1 {
+.laptopintroducao1 {
   border: 3px solid red;
 }
 
-.textointroducao2 {
+.laptopintroducao2 {
   border: 3px solid red;
 }
 
-.textointroducao3 {
+.laptopintroducao3 {
   border: 3px solid red;
 }
 
@@ -134,36 +140,31 @@ h6 {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 937px) {
+  * {
+    margin: 0;
+    padding: 0;
+  };
   .navbar a {
     color: white !important;
     font-size: clamp(1rem, 1.6vw, 2rem);
   }
 
   .inicio {
-    padding-top: 0;
+    margin-top: 82px;
+    padding-top:0px ;
+    border: 5px solid red;
   }
 
+  .cellphone-div {
+    padding-top: 0px !important;
+    display: block !important;
+  }
+
+  .laptop-div,
   .inicio img {
-    display: none;
+    display: none !important;
   }
 
-  .texto-div {
-    width: 100%;
-    height: 100%;
-    transform: translate(0%, -50%);
-    text-align: center;
-    padding: 1rem;
-  }
 
-  .textointroducao1,
-  .textointroducao2,
-  .textointroducao3 {
-    font-size: clamp(1.2rem, 4vw, 4.5vh);
-    line-height: 1.2;
-    word-break: break-word;
-    color: white;
-    transform: translate(0%, 0%);
-    width: 100%;
-  }
 }

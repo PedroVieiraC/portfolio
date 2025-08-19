@@ -1,56 +1,75 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Mapeamento dos conteúdos e imagens com layout em linha
-    const contentMapping = {
-        personal: {
-            title: 'Informações pessoais',
-            content: `
-            <div class="container info-wrapper d-flex flex-row align-items-center justify-content-center">
-              <p class="me-3">
-                Meu nome é <strong>Pedro Vieira</strong>, tenho 21 anos. Apreciador da tecnologia e do desenvolvimento de software, busco constantemente aprimorar minhas habilidades e expandir meus conhecimentos.
-              </p>
-              <img class="imgsobrefoto" src="./compounds/images/eufotor.png" alt="Foto de perfil"/>
-            </div>
-            `
-        },
-        academic: {
-            title: 'Informações acadêmicas',
-            content: `
-            <div class="container info-wrapper d-flex flex-row align-items-center justify-content-center">
-              <p class="me-3">
-                Atualmente, sou estudante de <strong>Engenharia de Computação</strong> no <strong>CEFET-MG</strong>.
-              </p>
-              <img class="imgsobre img-fluid" src="./compounds/images/lcef.png" alt="Logo do CEFET-MG"/>
-            </div>
-            `
-        },
-        professional: {
-            title: 'Informações profissionais',
-            content: `
-            <div class="container info-wrapper d-flex flex-row align-items-center justify-content-center">
-              <p class="me-3">
-                Apesar de ainda não possuir experiência profissional formal, desenvolvo projetos pessoais e acadêmicos. Me interesso principalmente por desenvolvimento back-end, bancos de dados e tecnologias inovadoras. Também possuo conhecimentos em front-end para criação de aplicações web.
-              </p>
-              <img class="imgsobre img-fluid" src="https://img.freepik.com/vetores-gratis/entrar-manutencao-de-estradas_1063-51.jpg?uid=R56932080&ga=GA1.1.1633943016.1737936399&semt=ais_hybrid" alt="em obras Designed by Ikaika / Freepik"/>
-            </div>
-            `
-        }
-    };
+    // Navegação suave para links âncora
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 
-    // Elementos da interface
-    const titleElement = document.getElementById("card-title");
-    const contentElement = document.getElementById("card-content");
+    // Destacar link ativo na navegação durante o scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.nav-link');
 
-    // Função para atualizar conteúdo
-    function updateContent(type) {
-        titleElement.innerText = contentMapping[type].title;
-        contentElement.innerHTML = contentMapping[type].content;
+    function highlightNavOnScroll() {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.pageYOffset >= sectionTop - 200) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === `#${current}`) {
+                item.classList.add('active');
+            }
+        });
     }
 
-    // Eventos de clique para os botões
-    document.getElementById("btnPersonal").addEventListener("click", () => updateContent("personal"));
-    document.getElementById("btnAcademic").addEventListener("click", () => updateContent("academic"));
-    document.getElementById("btnProfessional").addEventListener("click", () => updateContent("professional"));
+    window.addEventListener('scroll', highlightNavOnScroll);
 
-    // Define o conteúdo inicial
-    updateContent("personal");
+    // Animação de fade-in para elementos quando entram na viewport
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observar seções para animação
+    sections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(section);
+    });
+
+    // Navbar transparente/opaca baseada no scroll
+    const navbar = document.querySelector('.navbar');
+    function handleNavbarScroll() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }
+
+    window.addEventListener('scroll', handleNavbarScroll);
 });
