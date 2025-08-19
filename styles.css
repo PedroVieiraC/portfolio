@@ -1,41 +1,43 @@
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style-type: none;
-  color: inherit;
-  font-family: 'Poppins', sans-serif;
-  border: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap');
 
-html,
+
+
 body {
-  overflow-x: hidden;
-  width: 100%;
-  color: white;
-  background-color: #011638;
+  background: linear-gradient(135deg, #0d0e22, #0b375b, #0d0e22);
+  font-family: 'Poppins', sans-serif;
 }
 
-.body {
-  display: block;
+h1 {
+  font-family: 'Nata Sans', sans-serif;
+  font-weight: 600;
+  color: #a06205;
+  text-align: center;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
 }
 
 .navbar {
-  background-color: #011638;
-  border: 2px solid white;
-  font-size: 20px;
-  color: #a06205 !important;
+  background: linear-gradient(135deg, #0d0e22, #0b375b, #0d0e22);
   border: 5px solid black;
 }
 
 .navbar a {
   color: white !important;
+  font-size: clamp(1rem, 1.6vw, 2rem);
+
 }
 
 .navbar a:hover {
   color: #ff9800 !important;
-  transform: scale(1.2);
-  transition: all 0.4s;
+  transform: scale(1.04);
+  transition: all 0.5s;
 }
 
 .navbar-toggler-icon {
@@ -75,6 +77,7 @@ body {
 
 .inicio {
   position: relative;
+  padding: 0;
   padding-top: 83px;
   margin: 0;
   width: 100%;
@@ -126,29 +129,17 @@ body {
 }
 
 .sobremim {
-  background-color: #011638;
-  width: 100vw;
   padding: 4rem;
+  color: white;
 }
 
-.texto-sobre > h1,h2,p{  
-  margin: 0px;
-  padding: 0px;
-}
-
-.skills {
-  background-color: #FFEEDD;
-  height: 100vh;
-  width: 100vw;
-}
-
-.portfolio {
-  background-color: #011638;
-  height: 100vh;
-  width: 100vw;
-}
 
 @media (max-width: 900px) {
+  .navbar a {
+    color: white !important;
+    font-size: clamp(1rem, 1.6vw, 2rem);
+  }
+
   .inicio {
     padding-top: 0;
   }
