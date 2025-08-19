@@ -19,6 +19,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 body {
   background: linear-gradient(135deg, var(--dark-blue), var(--medium-blue), var(--dark-blue));
   background-attachment: fixed;
