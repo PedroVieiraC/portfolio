@@ -1,7 +1,6 @@
 .inicio {
   position: relative;
   padding: 0;
-  padding-top: 45px;
   margin: 0;
   width: 100%;
   overflow: hidden;
@@ -93,12 +92,13 @@
 }
 
 /* Mobile - esconder imagem de fundo e laptop-div */
-@media (max-width: 974px) {
+@media (max-width: 975px) {
   .inicio {
-    min-height: 80vh;
+    min-height: 50vh; /* Mudou de 80vh para 50vh */
     display: flex !important;
     align-items: center;
     justify-content: center;
+    padding: 2rem 1rem; /* Adicionado padding */
   }
   
   .inicio img {
@@ -114,39 +114,41 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 0; /* Removido padding extra */
     position: static !important;
   }
   
   .intro-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 2rem; /* Reduzido de 3rem para 2rem */
     align-items: center;
-    max-width: 900px;
+    max-width: 800px; /* Reduzido de 900px */
     width: 100%;
   }
   
   .intro-image {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    border-radius: 50%;
+    width: 100% !important;
+    max-width: 280px !important;
+    height: auto !important;
+    border-radius: 50% !important;
     box-shadow: 
-      0 20px 60px rgba(0, 0, 0, 0.4),
-      0 0 40px rgba(255, 152, 0, 0.2);
-    border: 4px solid rgba(255, 152, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    aspect-ratio: 1;
-    object-fit: cover;
+      0 15px 40px rgba(0, 0, 0, 0.4),
+      0 0 30px rgba(255, 152, 0, 0.2) !important;
+    border: 3px solid rgba(255, 152, 0, 0.4) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    aspect-ratio: 1 !important;
+    object-fit: cover !important;
     display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
   
   .intro-image:hover {
     transform: scale(1.05);
     box-shadow: 
-      0 25px 80px rgba(0, 0, 0, 0.5),
-      0 0 60px rgba(255, 152, 0, 0.3);
+      0 20px 60px rgba(0, 0, 0, 0.5),
+      0 0 40px rgba(255, 152, 0, 0.3);
   }
   
   .intro-text {
@@ -155,11 +157,11 @@
   
   .textointroducao1 {
     font-family: 'Inter', sans-serif;
-    font-size: clamp(1.2rem, 4vw, 1.8rem) !important;
+    font-size: clamp(1rem, 3.5vw, 1.4rem) !important;
     line-height: 1.2;
     color: rgba(255, 255, 255, 0.9) !important;
     font-weight: 400;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
     display: block !important;
   }
   
@@ -167,18 +169,18 @@
     font-family: 'Playfair Display', serif !important;
     font-weight: 700;
     color: var(--primary-orange) !important;
-    font-size: clamp(1.8rem, 7vw, 2.8rem) !important;
+    font-size: clamp(1.5rem, 5vw, 2.2rem) !important;
     text-shadow: 
       1px 1px 3px rgba(0, 0, 0, 0.5),
       0 0 8px rgba(255, 152, 0, 0.3);
     letter-spacing: 0.5px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
     display: block !important;
   }
   
   .textointroducao3 {
     font-family: 'Montserrat', sans-serif !important;
-    font-size: clamp(1rem, 3.5vw, 1.4rem) !important;
+    font-size: clamp(0.9rem, 3vw, 1.2rem) !important;
     line-height: 1.2;
     color: var(--text-white) !important;
     font-weight: 600;
@@ -199,18 +201,23 @@
 
 /* Telas muito pequenas */
 @media (max-width: 480px) {
+  .inicio {
+    min-height: 45vh; /* Ainda menor para mobile */
+    padding: 1.5rem 0.5rem;
+  }
+  
   .cellphone-div {
-    padding: 1.5rem;
+    padding: 0;
   }
   
   .intro-content {
     grid-template-columns: 1fr !important;
     text-align: center;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   
   .intro-image {
-    max-width: 280px;
+    max-width: 220px; /* Menor ainda no mobile */
     margin: 0 auto;
     display: block !important;
   }
@@ -218,4 +225,25 @@
   .intro-text {
     text-align: center !important;
   }
+  
+  .textointroducao1 {
+    font-size: clamp(0.9rem, 4vw, 1.2rem) !important;
+  }
+  
+  .textointroducao2 {
+    font-size: clamp(1.3rem, 6vw, 1.8rem) !important;
+  }
+  
+  .textointroducao3 {
+    font-size: clamp(0.8rem, 3.5vw, 1rem) !important;
+  }
+}
+
+/* Adicione esta regra no final do arquivo */
+
+/* Debug para forçar exibição da imagem */
+.intro-image {
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 999 !important;
 }
