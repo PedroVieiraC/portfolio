@@ -2,50 +2,199 @@
   background: rgba(13, 14, 34, 0.9);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-}
-
-.navbar a {
-  color: white !important;
-  font-size: clamp(1rem, 1.6vw, 2rem);
-}
-
-.navbar a:hover {
-  color: var(--primary-orange) !important;
-  transform: scale(1.04);
-  transition: all 0.5s;
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
-}
-
-.navbarSvgs {
-  margin: 0;
+  transition: all 0.3s ease;
   padding: 0;
 }
 
+/* Logo/Nome Pedro Vieira */
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 700;
+  color: var(--primary-orange) !important;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.navbar-brand:hover {
+  color: var(--secondary-orange) !important;
+  text-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+  text-decoration: none;
+}
+
+/* Ajustes para o menu de navegação */
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.7rem, 1.2vw, 1rem);
+  letter-spacing: 0.5px;
+  padding: 0.5rem 0 !important; /* Removido padding lateral */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap; /* Não quebra linha */
+  flex-shrink: 0; /* Não encolhe */
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary-orange) !important;
+  background-color: rgba(255, 152, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--primary-orange) !important;
+  background-color: rgba(255, 152, 0, 0.15);
+}
+
+/* Ícones sociais */
+.navbarSvgs {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
 .svgNavbar {
-  font-size: 2rem;
-  width: 35px;
-  height: 35px;
-  display: inline-block;
-  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.4s;
   outline: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
 .svgNavbar:hover {
-  opacity: 1;
-  transform: translateY(-0.5rem) scale(1.2);
+  transform: translateY(-0.3rem) scale(1.1);
   cursor: pointer;
   outline: none;
+  background-color: rgba(255, 152, 0, 0.1);
+  border-color: rgba(255, 152, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.2);
+}
+
+.svgNavbar svg {
+  width: 18px;
+  height: 18px;
 }
 
 .svgNavbar svg path {
   fill: #FFFFFF !important;
-  transition: fill 1s ease;
+  transition: fill 0.3s ease;
 }
 
 .svgNavbar:hover svg path {
   fill: var(--primary-orange) !important;
+}
+
+/* WhatsApp específico */
+.whatsapp-icon svg path {
+  fill: #25D366 !important;
+}
+
+.whatsapp-icon:hover {
+  background-color: rgba(37, 211, 102, 0.1) !important;
+  border-color: rgba(37, 211, 102, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2) !important;
+}
+
+.whatsapp-icon:hover svg path {
+  fill: #25D366 !important;
+}
+
+/* Botão toggle mobile */
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  background: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.25);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+  width: 24px;
+  height: 24px;
+}
+
+/* Desktop responsivo */
+@media (min-width: 976px) {
+  .navbar {
+    height: 70px;
+    min-height: 70px;
+    padding: 0 2rem;
+  }
+
+  .navbar-brand {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  }
+
+  .navbar-nav {
+    gap: 2rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: clamp(0.9rem, 1.4vw, 1.1rem); /* Maior no desktop */
+    padding: 0.5rem 0.5rem !important; /* Pequeno padding no desktop */
+  }
+
+  .navbarSvgs {
+    gap: 1.2rem;
+  }
+
+  .svgNavbar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .svgNavbar svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Mobile responsivo */
+@media (max-width: 975px) {
+  .navbar {
+    min-height: 60px;
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-nav {
+    gap: 1rem; /* Gap menor no mobile */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: clamp(0.75rem, 3vw, 0.9rem); /* Menor no mobile */
+    padding: 0.4rem 0 !important; /* Sem padding lateral no mobile */
+  }
+
+  .navbarSvgs {
+    gap: 0.75rem;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+}
+
+/* Para telas muito pequenas */
+@media (max-width: 600px) {
+  .navbar-nav .nav-link {
+    font-size: clamp(0.65rem, 4vw, 0.8rem); /* Ainda menor */
+  }
+
+  .navbar-nav {
+    gap: 0.5rem;
+  }
 }
